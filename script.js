@@ -1,20 +1,15 @@
-const nav = document.querySelector(".nav");
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-const fixNav = () => {
-  if (window.scrollY > nav.offsetHeight + 150) nav.classList.add("active");
-  else nav.classList.remove("active");
-};
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
 
-window.addEventListener("scroll", fixNav);
+    const offsetTop = targetElement.offsetTop - 100;
 
-// JavaScript to toggle 'active' class on click
-document.querySelectorAll(".gpt-button").forEach((item) => {
-  item.addEventListener("click", function () {
-    // Remove 'active' class from all elements
-    document
-      .querySelectorAll(".gpt-button")
-      .forEach((li) => li.classList.remove("active"));
-    // Add 'active' class to the clicked element
-    this.classList.add("active");
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth",
+    });
   });
 });

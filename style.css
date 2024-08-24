@@ -63,6 +63,9 @@
   --weight-bold: 700;
   --weight-extraBold: 800;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -426,15 +429,21 @@ transition: 0.5s ease-in-out;
 
 .card-author {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Align items vertically centered */
   margin-top: 10px;
 }
 
 .card-author img {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin-right: -5px;
+  padding: 0;
+  border-radius: 50%; /* Make the image circular */
+  height: 40px; /* Smaller height */
+  width: 40px; /* Smaller width */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  margin-right: 10px; /* Adds some space between the image and the text */
+}
+
+.card-author span {
+  font-size: 14px; /* Adjust the font size if needed */
 }
 
 .card-footer {
@@ -478,6 +487,8 @@ transition: 0.5s ease-in-out;
   margin-top: 40px; /* Adds some space above the flex container */
   width: 90%;
   border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
   text-align: justify;
   background-color: #1a1a2e;
   padding: 30px;
@@ -535,7 +546,7 @@ transition: 0.5s ease-in-out;
   border-radius: 25px;
 }
 .contact-form {
-  background-color: #19243a;
+  background-color: #1a1a2e;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -659,8 +670,112 @@ transition: 0.5s ease-in-out;
 }
 
 .copyright {
-  background-color: #19243a;
+  background-color: #1a1a2e;
   margin-top: 10px;
   color: white;
   text-align: center;
+}
+
+/* Blog.html Section */
+
+.blogs-card {
+  margin-top: 130px;
+}
+
+.blogs-section-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.latest-blogs {
+  margin-left: 196px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Write.html Section */
+.write-section {
+  margin-top: 100px;
+} /* General Section Styling */
+.write-section {
+  margin-top: 120px;
+  padding: 40px;
+  background: linear-gradient(to right, #03131e, #02091a);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Title */
+.write-section h2 {
+  color: #0ea6ec;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Title Input Field */
+.write-title {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(to right, #03131e, #02091a);
+  border-radius: 10px;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+/* Text Area for Blog Content */
+.write-blog {
+  padding: 20px;
+  background: linear-gradient(to right, #03131e, #02091a);
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+/* Remove white outlines */
+.write-title:focus,
+.write-blog:focus {
+  outline: none;
+  border-color: #0ea6ec;
+}
+
+/* Placeholder Styling */
+.write-title::placeholder,
+.write-blog::placeholder {
+  color: #a6a6a6;
+  opacity: 0.8;
+}
+
+/* Hover and Focus Effects */
+.write-title:hover,
+.write-blog:hover,
+.write-title:focus,
+.write-blog:focus {
+  border-color: #00aaff;
+}
+.write-submit {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* Blog Read Page */
+.read-blog {
+  margin-top: 120px;
+}
+.read-blog-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.read-blog-section p {
+  margin-top: 30px;
+  display: block;
+  text-align: justify;
 }
