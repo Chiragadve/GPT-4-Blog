@@ -384,15 +384,15 @@ transition: 0.5s ease-in-out;
   height: 500px;
 }
 .small-card {
-  max-width: 250px;
-  height: 250px;
+  max-width: 350px;
+  height: 500px;
 }
 .card {
   background-color: #1a1a2e;
   border-radius: 9px;
   overflow: hidden;
   color: white;
-
+  flex: 1;
   margin-bottom: 50px;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -426,7 +426,7 @@ transition: 0.5s ease-in-out;
 
 .card-author {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 10px;
 }
 
@@ -434,7 +434,7 @@ transition: 0.5s ease-in-out;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-right: -5px;
 }
 
 .card-footer {
@@ -454,4 +454,213 @@ transition: 0.5s ease-in-out;
   color: #00aaff;
   font-weight: bold;
   font-size: 14px;
+}
+.card-container {
+  display: flex;
+  flex: 1 1 calc(33.333% - 20px); /* Allows three cards per row with space for gaps */
+  max-width: calc(33.333% - 20px); /* Adjust based on the gap value */
+}
+.lower-card-section {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if there is not enough space */
+  justify-content: space-evenly;
+  gap: 20px; /* Adds spacing between the cards (adjust as needed) */
+}
+
+/* Recent Post Section */
+.recent-post {
+  margin-top: 65px;
+}
+
+.latest-post-container {
+  display: flex;
+  justify-content: flex-start; /* Aligns the items horizontally */
+  margin-top: 40px; /* Adds some space above the flex container */
+  width: 90%;
+  border-radius: 12px;
+  text-align: justify;
+  background-color: #1a1a2e;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.latest-post-left img {
+  border-radius: 12px;
+  height: 250px;
+  width: 280px;
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.latest-post-right {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  margin-top: 30px;
+  padding-bottom: 7px;
+}
+
+.latest-post-right p {
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.latest-post-right img {
+  margin-top: 10px;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 37px;
+  width: 39px;
+  border-radius: 31px;
+}
+
+.latest-post-right .author-info {
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Adjust the padding as needed */
+}
+
+.load-more {
+  margin-left: 40%;
+  cursor: pointer;
+}
+
+/* Contact us */
+.contact-us {
+  margin-top: 100px;
+}
+
+.contact-us-section {
+  background-color: #1a1a2e;
+  padding: 30px;
+  border-radius: 25px;
+}
+.contact-form {
+  background-color: #19243a;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  background-image: url(./assets/contactus.png);
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-size: contain; /* Makes the background image fit within the contact form */
+  background-position: right; /* Aligns the background image to the right */
+}
+
+.contact-form h1 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.input-field {
+  background-color: rgba(27, 43, 69, 0.5);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 24%;
+  color: white;
+}
+.input-field input {
+  color: white;
+}
+
+.message-field {
+  background-color: rgba(27, 43, 69, 0.5);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  width: 50%;
+  height: 150px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.submit-btn {
+  background-color: #1b95e0;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  width: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.image-container {
+  width: 45%;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.contain-contact {
+}
+
+/* Footer  */
+.footer-section {
+  background-color: #19243a;
+  margin-top: 100px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.footer-section img {
+  width: 200px;
+}
+
+.footer-section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 60px;
+}
+
+.about-company {
+  justify-content: start;
+  padding-left: 30px;
+  width: 280px;
+  word-wrap: break-word;
+}
+
+.footer-links {
+  margin-left: 20px;
+}
+
+.footer-links .section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  background-color: #19243a;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
 }
