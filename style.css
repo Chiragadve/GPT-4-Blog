@@ -75,6 +75,7 @@ body {
 a {
   text-decoration: none;
   display: inline-block;
+  color: white;
 }
 
 ul {
@@ -153,7 +154,15 @@ body.nav-active {
 .primary-button:hover {
   color: var(--accent-color-dark);
 }
-
+.error-message {
+  font-size: 5px;
+  color: red;
+  margin: 3px;
+}
+.profile-image {
+  width: 40px;
+  height: 40px;
+}
 .login-btn {
   background-image: var(--gradient-2);
   background-size: 200%;
@@ -398,6 +407,7 @@ transition: 0.5s ease-in-out;
   flex: 1;
   margin-bottom: 50px;
   width: 100%;
+  height: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -425,6 +435,8 @@ transition: 0.5s ease-in-out;
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
 }
 
 .card-author {
@@ -640,6 +652,7 @@ transition: 0.5s ease-in-out;
   padding-left: 30px;
   width: 280px;
   word-wrap: break-word;
+  text-align: justify;
 }
 
 .footer-links {
@@ -891,4 +904,8 @@ transition: 0.5s ease-in-out;
 
 .register-link p a:hover {
   text-decoration: underline;
+}
+
+.blog-title {
+  color: white;
 }

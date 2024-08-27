@@ -13,3 +13,18 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+document.querySelectorAll(".post-titles a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const postId = this.getAttribute("data-id");
+
+    fetch(`get_post.php?id=${postId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.querySelector(".blog-title").textContent = data.title;
+        document.querySelector(".blog-content").innerHTML = data.content;
+      })
+      .catch((error) => console.error("Error:", error));
+  });
+});
