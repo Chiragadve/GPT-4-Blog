@@ -55,20 +55,31 @@ if ($postTitle) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo htmlspecialchars($title); ?></title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
   <nav>
     <div class="main-nav nav flex">
-      <a href="index.php" class="logo"><img src="./assets/logo.png" alt="logo"></a>
-      <div class="nav-links">
+      <a href="index.php" class="logo">
+        <img src="./assets/logo.png" alt="logo" />
+      </a>
+
+      <!-- Hamburger Menu Button -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-links" id="nav-links">
         <ul class="flex">
-          <li><a class="hover-link" href="index.php">Home</a></li>
+          <li><a class="hover-link" href="#home">Home</a></li>
           <li><a class="hover-link" href="index.php#featured">Featured Post</a></li>
-          <li><a class="hover-link" href="#">Blogs</a></li>
+          <li><a class="hover-link" href="blogs.php">Blogs</a></li>
           <li><a class="hover-link" href="index.php#contactus">Contact us</a></li>
           <li><a class="hover-link" href="write.php">Write</a></li>
-          <li><a class="hover-link login login-btn" href="login.php">Login</a></li>
+          <a class="hover-link login login-btn" href="login.php">Login</a>
         </ul>
       </div>
     </div>
@@ -82,6 +93,8 @@ if ($postTitle) {
       </div>
     </div>
   </section>
+  <script src="script.js"></script>
+
 </body>
 
 </html>

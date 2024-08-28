@@ -28,3 +28,10 @@ document.querySelectorAll(".post-titles a").forEach((link) => {
       .catch((error) => console.error("Error:", error));
   });
 });
+
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navLinks = document.getElementById("nav-links");
+
+hamburgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
