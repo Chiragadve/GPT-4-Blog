@@ -65,9 +65,9 @@ This project is a comprehensive web application that includes a blog system, a c
 
 - `index.html` - Main HTML page with the contact form and blog section.
 - `styles.css` - Custom CSS for styling.
-- `contact.js` - JavaScript for handling form submission.
+- `script.js` - JavaScript for handling actions.
 - `blog.php` - PHP script for managing blog data.
-- `formspree-config.js` - JavaScript configuration for Formspree.
+- `write.php` - Page to write the blog.
 
 ## Usage
 
